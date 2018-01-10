@@ -93,7 +93,7 @@ installbbr(){
 
 startbbr(){
     mkdir -p $dir/tsunami && cd $dir/tsunami
-	wget --no-check-certificate -O ./tcp_tsunami.c https://gist.github.com/anonymous/ba338038e799eafbba173215153a7f3a/raw/55ff1e45c97b46f12261e07ca07633a9922ad55d/tcp_tsunami.c
+	wget --no-check-certificate -O ./tcp_tsunami.c https://github.com/reeselaye/ss-setup/blob/master/tcp_tsunami.c
 	echo "obj-m:=tcp_tsunami.o" > Makefile
 	make -C /lib/modules/$(uname -r)/build M=`pwd` modules CC=/usr/bin/gcc-4.9
 	insmod tcp_tsunami.ko
@@ -101,7 +101,7 @@ startbbr(){
     	depmod -a
     	modprobe tcp_tsunami
 	rm -rf /etc/sysctl.conf
-	wget -O /etc/sysctl.conf -N --no-check-certificate https://raw.githubusercontent.com/FunctionClub/YankeeBBR/master/sysctl.conf
+	wget -O /etc/sysctl.conf -N --no-check-certificate https://github.com/reeselaye/ss-setup/blob/master/sysctl.conf
 	sysctl -p
     cd .. && rm -rf $dir/tsunami
 	echo "魔改版BBR启动成功！"
