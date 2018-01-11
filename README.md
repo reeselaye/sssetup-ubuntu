@@ -1,20 +1,20 @@
 # sssetup for ubuntu
 
-Shadowsocks 服务器的简易安装和优化脚本，仅支持基于 Linux Ubuntu 16.04+ 的 VPS（KVM 虚拟化）。
+Shortcut scripts for installing and optimizing Shadowsocks server. By now only tested on Linux Ubuntu 16.04+ (VPS（KVM based).
 
-## 用法
+## Usage
 
-```请务必保存所有的工作之后，再执行以下 bash 命令。因为这些命令可能会重启 VPS。```
+```Before executing bash commands below, be sure to save any works on your VPS. Because your VPS might reboot (if needed), and WITHOUT ANY CONFIRMATION.```
 
-第一阶段：
+- Step 1: Run the command below with your terminal, to install Shadowsocks server and TCP-BBR optimization.
 
 ```bash
 wget -N --no-check-certificate https://raw.githubusercontent.com/reeselaye/sssetup-ubuntu/master/setup-1.sh && bash setup-1.sh
 ```
 
-命令执行完毕后，VPS 可能会重启。
+after ```step 1```, VPS will reboot if needed.
 
-第二阶段：
+- Step 2 (optional): Run the command below, to start Shadowsocks server using default settings. If you want to start Shadowsocks server in your way, just ingore this command and execute the ```ssserver``` with other parameters.
 
 ```bash
 wget -N --no-check-certificate https://raw.githubusercontent.com/reeselaye/sssetup-ubuntu/master/setup-2.sh && bash setup-2.sh
