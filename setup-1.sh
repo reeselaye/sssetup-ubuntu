@@ -4,5 +4,5 @@ sudo pip install shadowsocks
 
 wget --no-check-certificate https://raw.githubusercontent.com/reeselaye/ss-setup_debian_ubuntu/master/bbr.sh
 sudo chmod +x bbr.sh
-echo " " | sudo ./bbr.sh
+sudo ./bbr.sh
 
