@@ -8,15 +8,21 @@ Shortcut scripts for installing and optimizing Shadowsocks server. By now only t
 
 To complete the installation, only 2 (or optionally 1) bash commands are need.
 
-- Step 1: Run the command below with your terminal, to install Shadowsocks server and TCP-BBR optimization.
+### Step 1
+
+Run the command below with your terminal, to install Shadowsocks server and TCP-BBR optimization.
 
 ```bash
 wget -N --no-check-certificate https://raw.githubusercontent.com/reeselaye/sssetup-ubuntu/master/setup-1.sh && bash setup-1.sh
 ```
 
-after ```step 1``` done, the VPS will reboot if needed.
+when done, the VPS will reboot if needed.
 
-- Step 2 (optional): Run the command below, to start Shadowsocks server using default settings (port 443, password 11111111, method rc4-md5). If you want to start Shadowsocks server in your way, JUST IGNORE THIS COMMAND and run the ```ssserver``` with other parameters.
+### Step 2 (optional)
+
+Run the command below, to start Shadowsocks server using default settings (port 443, password 11111111, method rc4-md5).
+
+If you want to start Shadowsocks server in your way, JUST IGNORE THIS COMMAND and run the ```ssserver``` with other parameters.
 
 ```bash
 wget -N --no-check-certificate https://raw.githubusercontent.com/reeselaye/sssetup-ubuntu/master/setup-2.sh && bash setup-2.sh
