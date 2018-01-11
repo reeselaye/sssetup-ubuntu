@@ -176,7 +176,6 @@ reboot_os() {
     echo
     echo -e "${green}Info:${plain} Reboot......"
     reboot
-    fi
 }
 
 install_bbr() {
